@@ -380,6 +380,190 @@ function App() {
           </div>
         </div>
       </section>
+            {/* PACKAGES */}
+
+      <section
+        style={{
+          padding: '120px 20px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1400px',
+            margin: 'auto',
+          }}
+        >
+          <h2
+            style={{
+              textAlign: 'center',
+              fontSize: '56px',
+              marginBottom: '20px',
+            }}
+          >
+            الباقات
+          </h2>
+
+          <p
+            style={{
+              textAlign: 'center',
+              color: '#94a3b8',
+              maxWidth: '700px',
+              margin: '0 auto 70px',
+              lineHeight: 1.8,
+            }}
+          >
+            اختر الباقة المناسبة لمشروعك وابدأ في إنتاج فيديوهات AI
+            سينمائية احترافية.
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit,minmax(320px,1fr))',
+              gap: '35px',
+            }}
+          >
+            {[
+              {
+                name: 'الباقة الأساسية',
+                price: '2100 ج.م',
+                features: [
+                  '3 Reels احترافية',
+                  'مدة 20-30 ثانية',
+                  'تعديل واحد لكل ريل',
+                  'تصدير 1080',
+                ],
+              },
+
+              {
+                name: 'باقة النمو',
+                price: '3800 ج.م',
+                popular: true,
+                features: [
+                  '6 Reels احترافية',
+                  '2 تعديل لكل ريل',
+                  'تصميم Cover',
+                  'مؤثرات احترافية',
+                  'هندسة صوتية',
+                ],
+              },
+
+              {
+                name: 'البريميوم',
+                price: '4400 ج.م',
+                features: [
+                  '8 Reels احترافية',
+                  '2 تعديل لكل ريل',
+                  'Subtitles احترافية',
+                  'بناء هوية بصرية',
+                  'أفضل جودة إنتاج',
+                ],
+              },
+            ].map((pkg, index) => (
+              <div
+                key={index}
+                style={{
+                  position: 'relative',
+                  background: pkg.popular
+                    ? 'linear-gradient(180deg,#7c3aed,#4c1d95)'
+                    : 'rgba(255,255,255,0.05)',
+
+                  border: pkg.popular
+                    ? '1px solid rgba(168,85,247,0.5)'
+                    : '1px solid rgba(255,255,255,0.08)',
+
+                  borderRadius: '32px',
+                  padding: '40px',
+                  overflow: 'hidden',
+                  backdropFilter: 'blur(14px)',
+                }}
+              >
+                {pkg.popular && (
+                  <div
+                    style={{
+                      position: 'absolute',
+                      top: '20px',
+                      right: '20px',
+                      background: 'white',
+                      color: '#4c1d95',
+                      padding: '8px 16px',
+                      borderRadius: '999px',
+                      fontSize: '14px',
+                      fontWeight: 'bold',
+                    }}
+                  >
+                    الأكثر طلبًا
+                  </div>
+                )}
+
+                <h3
+                  style={{
+                    fontSize: '36px',
+                    marginBottom: '20px',
+                  }}
+                >
+                  {pkg.name}
+                </h3>
+
+                <div
+                  style={{
+                    fontSize: '54px',
+                    fontWeight: 'bold',
+                    marginBottom: '35px',
+                  }}
+                >
+                  {pkg.price}
+                </div>
+
+                <div
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '18px',
+                    marginBottom: '40px',
+                  }}
+                >
+                  {pkg.features.map((feature, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        color: '#e2e8f0',
+                        fontSize: '18px',
+                      }}
+                    >
+                      ✓ {feature}
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%20${pkg.name}%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
+                  style={{
+                    display: 'block',
+                    textAlign: 'center',
+                    background: pkg.popular
+                      ? 'white'
+                      : '#7c3aed',
+
+                    color: pkg.popular
+                      ? '#4c1d95'
+                      : 'white',
+
+                    padding: '18px',
+                    borderRadius: '999px',
+                    textDecoration: 'none',
+                    fontWeight: 'bold',
+                    fontSize: '18px',
+                  }}
+                >
+                  اطلب الباقة
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
