@@ -821,10 +821,11 @@ function App() {
           boxShadow: '0 0 40px rgba(37,211,102,0.5)',
         }}
       >
-        W
+       <FaWhatsapp />
       </a>
     </div>
   )
 }
+import { FaWhatsapp } from 'react-icons/fa'
 
 export default App
