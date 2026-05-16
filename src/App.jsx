@@ -564,6 +564,265 @@ function App() {
           </div>
         </div>
       </section>
+            {/* HOW IT WORKS */}
+
+      <section
+        style={{
+          padding: '120px 20px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1200px',
+            margin: 'auto',
+          }}
+        >
+          <h2
+            style={{
+              textAlign: 'center',
+              fontSize: '56px',
+              marginBottom: '20px',
+            }}
+          >
+            كيف نبدأ؟
+          </h2>
+
+          <p
+            style={{
+              textAlign: 'center',
+              color: '#94a3b8',
+              maxWidth: '700px',
+              margin: '0 auto 70px',
+              lineHeight: 1.8,
+            }}
+          >
+            خطوات بسيطة لتحويل مشروعك إلى فيديوهات AI سينمائية احترافية.
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns:
+                'repeat(auto-fit,minmax(250px,1fr))',
+              gap: '25px',
+            }}
+          >
+            {[
+              'اختر الباقة المناسبة',
+              'أرسل صور أو فيديوهات المشروع',
+              'أرسل تفاصيل النشاط والهدف',
+              'ادفع 50% مقدم',
+              'استلم الفيديو خلال أسبوع',
+            ].map((step, index) => (
+              <div
+                key={index}
+                style={{
+                  background: 'rgba(255,255,255,0.05)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                  padding: '35px',
+                  borderRadius: '28px',
+                  textAlign: 'center',
+                }}
+              >
+                <div
+                  style={{
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '50%',
+                    background: '#7c3aed',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '0 auto 20px',
+                    fontWeight: 'bold',
+                    fontSize: '22px',
+                  }}
+                >
+                  {index + 1}
+                </div>
+
+                <h3
+                  style={{
+                    fontSize: '22px',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {step}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+
+      <section
+        style={{
+          padding: '120px 20px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '900px',
+            margin: 'auto',
+          }}
+        >
+          <h2
+            style={{
+              textAlign: 'center',
+              fontSize: '56px',
+              marginBottom: '70px',
+            }}
+          >
+            الأسئلة الشائعة
+          </h2>
+
+          {[
+            {
+              q: 'هل أحتاج تصوير احترافي؟',
+              a: 'لا، يمكننا العمل حتى باستخدام صور أو فيديوهات بالموبايل.',
+            },
+
+            {
+              q: 'ما مدة التسليم؟',
+              a: 'يتم التسليم خلال أسبوع من بدء التنفيذ.',
+            },
+
+            {
+              q: 'هل يشمل التنفيذ تعليق صوتي وسيناريو؟',
+              a: 'نعم، جميع الباقات تشمل كتابة السكريبت والتعليق الصوتي.',
+            },
+
+            {
+              q: 'هل يمكن طلب تعديلات؟',
+              a: 'نعم، حسب عدد التعديلات المتاحة في كل باقة.',
+            },
+
+            {
+              q: 'ما طرق الدفع المتاحة؟',
+              a: 'InstaPay و E-wallet مع دفع 50% مقدم.',
+            },
+          ].map((faq, index) => (
+            <div
+              key={index}
+              style={{
+                background: 'rgba(255,255,255,0.05)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '24px',
+                padding: '30px',
+                marginBottom: '20px',
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: '24px',
+                  marginBottom: '14px',
+                }}
+              >
+                {faq.q}
+              </h3>
+
+              <p
+                style={{
+                  color: '#cbd5e1',
+                  lineHeight: 1.8,
+                }}
+              >
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+
+      <section
+        style={{
+          padding: '120px 20px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1200px',
+            margin: 'auto',
+            background:
+              'linear-gradient(135deg,#7c3aed,#4c1d95)',
+
+            borderRadius: '40px',
+            padding: '70px 30px',
+            textAlign: 'center',
+          }}
+        >
+          <h2
+            style={{
+              fontSize: '56px',
+              lineHeight: 1.3,
+              marginBottom: '25px',
+            }}
+          >
+            جاهز تجعل مشروعك
+            <br />
+            يظهر بشكل سينمائي؟
+          </h2>
+
+          <p
+            style={{
+              maxWidth: '700px',
+              margin: '0 auto',
+              lineHeight: 1.8,
+              fontSize: '20px',
+              color: '#ede9fe',
+            }}
+          >
+            ابدأ الآن وتواصل معنا عبر واتساب للحصول على فيديوهات AI
+            احترافية لمشروعك.
+          </p>
+
+          <a
+            href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
+            style={{
+              display: 'inline-block',
+              marginTop: '40px',
+              background: 'white',
+              color: '#4c1d95',
+              padding: '20px 45px',
+              borderRadius: '999px',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '20px',
+            }}
+          >
+            تواصل الآن
+          </a>
+        </div>
+      </section>
+
+      {/* FLOATING WHATSAPP */}
+
+      <a
+        href='https://wa.me/201005825888'
+        style={{
+          position: 'fixed',
+          bottom: '25px',
+          right: '25px',
+          width: '70px',
+          height: '70px',
+          borderRadius: '50%',
+          background: '#25D366',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          color: 'white',
+          fontSize: '34px',
+          textDecoration: 'none',
+          zIndex: 999,
+          boxShadow: '0 0 40px rgba(37,211,102,0.5)',
+        }}
+      >
+        W
+      </a>
     </div>
   )
 }
