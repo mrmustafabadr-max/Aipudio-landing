@@ -61,7 +61,7 @@ function App() {
         >
 
           <img
-            src="/public/images/Logo.svg"
+            src="/images/Logo.svg"
             alt="Aipudio"
             style={{
               width: '180px',
