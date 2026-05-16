@@ -136,7 +136,7 @@ function App() {
           {/* LOGO */}
 
           <img
-            src='/images/Logo.svg'
+            src='/images/Logo.png'
             alt='Aipudio'
             style={{
               width: '220px',
