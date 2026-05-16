@@ -22,7 +22,7 @@ function App() {
       style={{
         background: '#050816',
         color: 'white',
-        fontFamily: 'sans-serif',
+        fontFamily: 'Cairo, sans-serif',
         overflowX: 'hidden',
       }}
     >
