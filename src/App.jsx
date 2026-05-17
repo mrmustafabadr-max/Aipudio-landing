@@ -79,7 +79,7 @@ function App() {
             position: 'absolute',
             inset: 0,
             background:
-              'linear-gradient(to bottom, rgba(5,8,22,0.7), rgba(5,8,22,0.95))',
+  'linear-gradient(to bottom, rgba(5,8,22,0.35), rgba(5,8,22,0.75))',
           }}
         />
 
