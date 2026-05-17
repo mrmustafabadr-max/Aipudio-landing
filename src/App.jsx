@@ -425,22 +425,45 @@ function App() {
           >
 
             {[
-              {
-                name: 'الباقة الأساسية',
-                price: '2100 ج.م',
-              },
+  {
+    name: 'الباقة الأساسية',
+    price: '2100 ج.م',
 
-              {
-                name: 'باقة النمو',
-                price: '3800 ج.م',
-                popular: true,
-              },
+    features: [
+      '3 Reels احترافية',
+      'مدة 20-30 ثانية',
+      'تعديل واحد لكل ريل',
+      'تصدير 1080',
+    ],
+  },
 
-              {
-                name: 'البريميوم',
-                price: '4400 ج.م',
-              },
-            ].map((pkg, index) => (
+  {
+    name: 'باقة النمو',
+    price: '3800 ج.م',
+    popular: true,
+
+    features: [
+      '6 Reels احترافية',
+      '2 تعديل لكل ريل',
+      'تصميم Cover',
+      'مؤثرات احترافية',
+      'هندسة صوتية',
+    ],
+  },
+
+  {
+    name: 'البريميوم',
+    price: '4400 ج.م',
+
+    features: [
+      '8 Reels احترافية',
+      '2 تعديل لكل ريل',
+      'Subtitles احترافية',
+      'بناء هوية بصرية',
+      'أفضل جودة إنتاج',
+    ],
+  },
+].map((pkg, index) => (
 
               <div
                 key={index}
@@ -498,7 +521,30 @@ function App() {
                 >
                   {pkg.price}
                 </div>
+<div
+  style={{
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '18px',
+    marginBottom: '40px',
+  }}
+>
 
+  {pkg.features.map((feature, i) => (
+
+    <div
+      key={i}
+      style={{
+        color: '#e2e8f0',
+        fontSize: '18px',
+      }}
+    >
+      ✓ {feature}
+    </div>
+
+  ))}
+
+</div>
                 <a
                   href='https://wa.me/201005825888'
                   style={{
