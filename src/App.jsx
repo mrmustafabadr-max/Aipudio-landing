@@ -1,16 +1,23 @@
+import { FaWhatsapp } from 'react-icons/fa'
+import { useState } from 'react'
+
 function App() {
 
   const [selectedVideo, setSelectedVideo] = useState(null)
-   const portfolioVideos = [
+
+  const portfolioVideos = [
+    {
       title: 'مطاعم',
       video:
         'https://res.cloudinary.com/dtju69if0/video/upload/v1778899011/restaurant_mfy9sg.mp4',
     },
+
     {
       title: 'عقارات',
       video:
         'https://res.cloudinary.com/dtju69if0/video/upload/v1778898970/realestate_pv2vrq.mp4',
     },
+
     {
       title: 'سكين كير',
       video:
@@ -27,6 +34,7 @@ function App() {
         overflowX: 'hidden',
       }}
     >
+
       {/* HERO */}
 
       <section
@@ -41,6 +49,7 @@ function App() {
           overflow: 'hidden',
         }}
       >
+
         {/* BACKGROUND VIDEO */}
 
         <video
@@ -48,7 +57,6 @@ function App() {
           muted
           loop
           playsInline
-          onClick={() => setSelectedVideo(item.video)}
           style={{
             position: 'absolute',
             inset: 0,
@@ -99,6 +107,7 @@ function App() {
             maxWidth: '1100px',
           }}
         >
+
           {/* TOP BAR */}
 
           <div
@@ -110,6 +119,7 @@ function App() {
               justifyContent: 'center',
             }}
           >
+
             <div
               style={{
                 background: 'rgba(255,255,255,0.08)',
@@ -133,6 +143,7 @@ function App() {
             >
               تسليم خلال أسبوع
             </div>
+
           </div>
 
           {/* LOGO */}
@@ -141,12 +152,12 @@ function App() {
             src='/images/Logo.png'
             alt='Aipudio'
             style={{
-              width: '220px',
+              width: '180px',
               marginBottom: '40px',
             }}
           />
 
-          {/* HEADLINE */}
+          {/* TITLE */}
 
           <h1
             style={{
@@ -195,6 +206,7 @@ function App() {
               flexWrap: 'wrap',
             }}
           >
+
             <a
               href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
               style={{
@@ -227,56 +239,11 @@ function App() {
             >
               شاهد الأعمال
             </a>
+
           </div>
 
-          {/* STATS */}
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))',
-              gap: '20px',
-              marginTop: '80px',
-            }}
-          >
-            {[
-              ['+50', 'فيديو سينمائي'],
-              ['+20', 'عميل'],
-              ['+1M', 'مشاهدة'],
-              ['7 أيام', 'مدة التسليم'],
-            ].map((item, index) => (
-              <div
-                key={index}
-                style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  padding: '25px',
-                  borderRadius: '24px',
-                  backdropFilter: 'blur(10px)',
-                }}
-              >
-                <h2
-                  style={{
-                    fontSize: '42px',
-                    color: '#a855f7',
-                    margin: 0,
-                  }}
-                >
-                  {item[0]}
-                </h2>
-
-                <p
-                  style={{
-                    color: '#cbd5e1',
-                    marginTop: '12px',
-                  }}
-                >
-                  {item[1]}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
+
       </section>
 
       {/* PORTFOLIO */}
@@ -287,12 +254,14 @@ function App() {
           padding: '120px 20px',
         }}
       >
+
         <div
           style={{
             maxWidth: '1400px',
             margin: 'auto',
           }}
         >
+
           <h2
             style={{
               textAlign: 'center',
@@ -323,7 +292,9 @@ function App() {
               gap: '35px',
             }}
           >
+
             {portfolioVideos.map((item, index) => (
+
               <div
                 key={index}
                 style={{
@@ -334,15 +305,18 @@ function App() {
                   backdropFilter: 'blur(14px)',
                 }}
               >
+
                 <video
                   autoPlay
                   muted
                   loop
                   playsInline
+                  onClick={() => setSelectedVideo(item.video)}
                   style={{
                     width: '100%',
                     height: '600px',
                     objectFit: 'cover',
+                    cursor: 'pointer',
                   }}
                 >
                   <source src={item.video} type='video/mp4' />
@@ -353,6 +327,7 @@ function App() {
                     padding: '28px',
                   }}
                 >
+
                   <h3
                     style={{
                       fontSize: '32px',
@@ -376,429 +351,17 @@ function App() {
                   >
                     اطلب فيديو مشابه
                   </a>
+
                 </div>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
-      </section>
-            {/* PACKAGES */}
 
-      <section
-        style={{
-          padding: '120px 20px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '1400px',
-            margin: 'auto',
-          }}
-        >
-          <h2
-            style={{
-              textAlign: 'center',
-              fontSize: '56px',
-              marginBottom: '20px',
-            }}
-          >
-            الباقات
-          </h2>
-
-          <p
-            style={{
-              textAlign: 'center',
-              color: '#94a3b8',
-              maxWidth: '700px',
-              margin: '0 auto 70px',
-              lineHeight: 1.8,
-            }}
-          >
-            اختر الباقة المناسبة لمشروعك وابدأ في إنتاج فيديوهات AI
-            سينمائية احترافية.
-          </p>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns:
-                'repeat(auto-fit,minmax(320px,1fr))',
-              gap: '35px',
-            }}
-          >
-            {[
-              {
-                name: 'الباقة الأساسية',
-                price: '2100 ج.م',
-                features: [
-                  '3 Reels احترافية',
-                  'مدة 20-30 ثانية',
-                  'تعديل واحد لكل ريل',
-                  'تصدير 1080',
-                ],
-              },
-
-              {
-                name: 'باقة النمو',
-                price: '3800 ج.م',
-                popular: true,
-                features: [
-                  '6 Reels احترافية',
-                  '2 تعديل لكل ريل',
-                  'تصميم Cover',
-                  'مؤثرات احترافية',
-                  'هندسة صوتية',
-                ],
-              },
-
-              {
-                name: 'البريميوم',
-                price: '4400 ج.م',
-                features: [
-                  '8 Reels احترافية',
-                  '2 تعديل لكل ريل',
-                  'Subtitles احترافية',
-                  'بناء هوية بصرية',
-                  'أفضل جودة إنتاج',
-                ],
-              },
-            ].map((pkg, index) => (
-              <div
-                key={index}
-                style={{
-                  position: 'relative',
-                  background: pkg.popular
-                    ? 'linear-gradient(180deg,#7c3aed,#4c1d95)'
-                    : 'rgba(255,255,255,0.05)',
-
-                  border: pkg.popular
-                    ? '1px solid rgba(168,85,247,0.5)'
-                    : '1px solid rgba(255,255,255,0.08)',
-
-                  borderRadius: '32px',
-                  padding: '40px',
-                  overflow: 'hidden',
-                  backdropFilter: 'blur(14px)',
-                }}
-              >
-                {pkg.popular && (
-                  <div
-                    style={{
-                      position: 'absolute',
-                      top: '20px',
-                      right: '20px',
-                      background: 'white',
-                      color: '#4c1d95',
-                      padding: '8px 16px',
-                      borderRadius: '999px',
-                      fontSize: '14px',
-                      fontWeight: 'bold',
-                    }}
-                  >
-                    الأكثر طلبًا
-                  </div>
-                )}
-
-                <h3
-                  style={{
-                    fontSize: '36px',
-                    marginBottom: '20px',
-                  }}
-                >
-                  {pkg.name}
-                </h3>
-
-                <div
-                  style={{
-                    fontSize: '54px',
-                    fontWeight: 'bold',
-                    marginBottom: '35px',
-                  }}
-                >
-                  {pkg.price}
-                </div>
-
-                <div
-                  style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '18px',
-                    marginBottom: '40px',
-                  }}
-                >
-                  {pkg.features.map((feature, i) => (
-                    <div
-                      key={i}
-                      style={{
-                        color: '#e2e8f0',
-                        fontSize: '18px',
-                      }}
-                    >
-                      ✓ {feature}
-                    </div>
-                  ))}
-                </div>
-
-                <a
-                  href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%20${pkg.name}%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
-                  style={{
-                    display: 'block',
-                    textAlign: 'center',
-                    background: pkg.popular
-                      ? 'white'
-                      : '#7c3aed',
-
-                    color: pkg.popular
-                      ? '#4c1d95'
-                      : 'white',
-
-                    padding: '18px',
-                    borderRadius: '999px',
-                    textDecoration: 'none',
-                    fontWeight: 'bold',
-                    fontSize: '18px',
-                  }}
-                >
-                  اطلب الباقة
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-            {/* HOW IT WORKS */}
-
-      <section
-        style={{
-          padding: '120px 20px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '1200px',
-            margin: 'auto',
-          }}
-        >
-          <h2
-            style={{
-              textAlign: 'center',
-              fontSize: '56px',
-              marginBottom: '20px',
-            }}
-          >
-            كيف نبدأ؟
-          </h2>
-
-          <p
-            style={{
-              textAlign: 'center',
-              color: '#94a3b8',
-              maxWidth: '700px',
-              margin: '0 auto 70px',
-              lineHeight: 1.8,
-            }}
-          >
-            خطوات بسيطة لتحويل مشروعك إلى فيديوهات AI سينمائية احترافية.
-          </p>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns:
-                'repeat(auto-fit,minmax(250px,1fr))',
-              gap: '25px',
-            }}
-          >
-            {[
-              'اختر الباقة المناسبة',
-              'أرسل صور أو فيديوهات المشروع',
-              'أرسل تفاصيل النشاط والهدف',
-              'ادفع 50% مقدم',
-              'استلم الفيديو خلال أسبوع',
-            ].map((step, index) => (
-              <div
-                key={index}
-                style={{
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  padding: '35px',
-                  borderRadius: '28px',
-                  textAlign: 'center',
-                }}
-              >
-                <div
-                  style={{
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '50%',
-                    background: '#7c3aed',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    margin: '0 auto 20px',
-                    fontWeight: 'bold',
-                    fontSize: '22px',
-                  }}
-                >
-                  {index + 1}
-                </div>
-
-                <h3
-                  style={{
-                    fontSize: '22px',
-                    lineHeight: 1.6,
-                  }}
-                >
-                  {step}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-
-      <section
-        style={{
-          padding: '120px 20px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '900px',
-            margin: 'auto',
-          }}
-        >
-          <h2
-            style={{
-              textAlign: 'center',
-              fontSize: '56px',
-              marginBottom: '70px',
-            }}
-          >
-            الأسئلة الشائعة
-          </h2>
-
-          {[
-            {
-              q: 'هل أحتاج تصوير احترافي؟',
-              a: 'لا، يمكننا العمل حتى باستخدام صور أو فيديوهات بالموبايل.',
-            },
-
-            {
-              q: 'ما مدة التسليم؟',
-              a: 'يتم التسليم خلال أسبوع من بدء التنفيذ.',
-            },
-
-            {
-              q: 'هل يشمل التنفيذ تعليق صوتي وسيناريو؟',
-              a: 'نعم، جميع الباقات تشمل كتابة السكريبت والتعليق الصوتي.',
-            },
-
-            {
-              q: 'هل يمكن طلب تعديلات؟',
-              a: 'نعم، حسب عدد التعديلات المتاحة في كل باقة.',
-            },
-
-            {
-              q: 'ما طرق الدفع المتاحة؟',
-              a: 'InstaPay و E-wallet مع دفع 50% مقدم.',
-            },
-          ].map((faq, index) => (
-            <div
-              key={index}
-              style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '24px',
-                padding: '30px',
-                marginBottom: '20px',
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: '24px',
-                  marginBottom: '14px',
-                }}
-              >
-                {faq.q}
-              </h3>
-
-              <p
-                style={{
-                  color: '#cbd5e1',
-                  lineHeight: 1.8,
-                }}
-              >
-                {faq.a}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* FINAL CTA */}
-
-      <section
-        style={{
-          padding: '120px 20px',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '1200px',
-            margin: 'auto',
-            background:
-              'linear-gradient(135deg,#7c3aed,#4c1d95)',
-
-            borderRadius: '40px',
-            padding: '70px 30px',
-            textAlign: 'center',
-          }}
-        >
-          <h2
-            style={{
-              fontSize: '56px',
-              lineHeight: 1.3,
-              marginBottom: '25px',
-            }}
-          >
-            جاهز تجعل مشروعك
-            <br />
-            يظهر بشكل سينمائي؟
-          </h2>
-
-          <p
-            style={{
-              maxWidth: '700px',
-              margin: '0 auto',
-              lineHeight: 1.8,
-              fontSize: '20px',
-              color: '#ede9fe',
-            }}
-          >
-            ابدأ الآن وتواصل معنا عبر واتساب للحصول على فيديوهات AI
-            احترافية لمشروعك.
-          </p>
-
-          <a
-            href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
-            style={{
-              display: 'inline-block',
-              marginTop: '40px',
-              background: 'white',
-              color: '#4c1d95',
-              padding: '20px 45px',
-              borderRadius: '999px',
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              fontSize: '20px',
-            }}
-          >
-            تواصل الآن
-          </a>
-        </div>
       </section>
 
       {/* FLOATING WHATSAPP */}
@@ -823,10 +386,10 @@ function App() {
           boxShadow: '0 0 40px rgba(37,211,102,0.5)',
         }}
       >
-       <FaWhatsapp />
+        <FaWhatsapp />
       </a>
-    </div>
-          {/* VIDEO MODAL */}
+
+      {/* VIDEO MODAL */}
 
       {selectedVideo && (
         <div
@@ -842,6 +405,7 @@ function App() {
             padding: '20px',
           }}
         >
+
           <div
             style={{
               position: 'relative',
@@ -849,6 +413,7 @@ function App() {
               maxWidth: '450px',
             }}
           >
+
             <video
               controls
               autoPlay
@@ -881,11 +446,14 @@ function App() {
             >
               ✕
             </button>
+
           </div>
+
         </div>
       )}
+
+    </div>
   )
 }
-import { FaWhatsapp } from 'react-icons/fa'
-import { useState } from 'react'
+
 export default App
