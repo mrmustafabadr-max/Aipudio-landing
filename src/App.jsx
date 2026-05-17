@@ -1,6 +1,6 @@
 function App() {
-  const portfolioVideos = [
-    {
+
+  const [selectedVideo, setSelectedVideo] = useState(null)
       title: 'مطاعم',
       video:
         'https://res.cloudinary.com/dtju69if0/video/upload/v1778899011/restaurant_mfy9sg.mp4',
@@ -47,6 +47,7 @@ function App() {
           muted
           loop
           playsInline
+          onClick={() => setSelectedVideo(item.video)}
           style={{
             position: 'absolute',
             inset: 0,
@@ -824,8 +825,66 @@ function App() {
        <FaWhatsapp />
       </a>
     </div>
+          {/* VIDEO MODAL */}
+
+      {selectedVideo && (
+        <div
+          onClick={() => setSelectedVideo(null)}
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(0,0,0,0.9)',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            zIndex: 9999,
+            padding: '20px',
+          }}
+        >
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              maxWidth: '450px',
+            }}
+          >
+            <video
+              controls
+              autoPlay
+              style={{
+                width: '100%',
+                borderRadius: '24px',
+              }}
+            >
+              <source
+                src={selectedVideo}
+                type='video/mp4'
+              />
+            </video>
+
+            <button
+              onClick={() => setSelectedVideo(null)}
+              style={{
+                position: 'absolute',
+                top: '-15px',
+                right: '-15px',
+                width: '45px',
+                height: '45px',
+                borderRadius: '50%',
+                border: 'none',
+                background: '#7c3aed',
+                color: 'white',
+                fontSize: '20px',
+                cursor: 'pointer',
+              }}
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
   )
 }
 import { FaWhatsapp } from 'react-icons/fa'
-
+import { useState } from 'react'
 export default App
