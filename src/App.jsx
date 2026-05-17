@@ -795,6 +795,132 @@ function App() {
         </div>
 
       </section>
+            {/* FINAL CTA */}
+
+      <section
+        style={{
+          padding: '120px 20px',
+        }}
+      >
+
+        <div
+          style={{
+            maxWidth: '1200px',
+            margin: 'auto',
+
+            background:
+              'linear-gradient(135deg,#7c3aed,#4c1d95)',
+
+            borderRadius: '40px',
+
+            padding: '80px 30px',
+
+            textAlign: 'center',
+
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+
+          {/* GLOW */}
+
+          <div
+            style={{
+              position: 'absolute',
+              width: '400px',
+              height: '400px',
+              background: 'white',
+              opacity: 0.08,
+              filter: 'blur(120px)',
+              top: '-100px',
+              left: '-100px',
+            }}
+          />
+
+          <div
+            style={{
+              position: 'relative',
+              zIndex: 2,
+            }}
+          >
+
+            <h2
+              style={{
+                fontSize: 'clamp(42px,6vw,72px)',
+                lineHeight: 1.25,
+                marginBottom: '25px',
+              }}
+            >
+              جاهز تجعل مشروعك
+              <br />
+              يظهر بشكل سينمائي؟
+            </h2>
+
+            <p
+              style={{
+                maxWidth: '750px',
+                margin: '0 auto',
+                lineHeight: 1.9,
+                fontSize: '22px',
+                color: '#ede9fe',
+              }}
+            >
+              ابدأ الآن وتواصل معنا عبر واتساب للحصول على فيديوهات
+              AI احترافية لمشروعك.
+            </p>
+
+            <a
+              href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
+
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform =
+                  'translateY(-4px) scale(1.03)'
+
+                e.currentTarget.style.boxShadow =
+                  '0 25px 60px rgba(255,255,255,0.35)'
+              }}
+
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform =
+                  'translateY(0px) scale(1)'
+
+                e.currentTarget.style.boxShadow =
+                  '0 15px 40px rgba(255,255,255,0.2)'
+              }}
+
+              style={{
+                display: 'inline-block',
+
+                marginTop: '45px',
+
+                background: 'white',
+
+                color: '#4c1d95',
+
+                padding: '20px 45px',
+
+                borderRadius: '999px',
+
+                textDecoration: 'none',
+
+                fontWeight: 'bold',
+
+                fontSize: '20px',
+
+                transition: '0.3s',
+
+                boxShadow:
+                  '0 15px 40px rgba(255,255,255,0.2)',
+              }}
+            >
+              تواصل الآن
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
       {/* FLOATING WHATSAPP */}
 
       <a
