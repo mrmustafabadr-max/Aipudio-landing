@@ -86,16 +86,22 @@ function App() {
         {/* GLOW */}
 
         <div
-          style={{
-            position: 'absolute',
-            width: '600px',
-            height: '600px',
-            background: '#7c3aed',
-            filter: 'blur(180px)',
-            opacity: 0.18,
-            top: '-200px',
-            borderRadius: '50%',
-          }}
+         style={{
+  background:
+    'linear-gradient(135deg,#7c3aed,#9333ea)',
+
+  color: 'white',
+  padding: '18px 40px',
+  borderRadius: '999px',
+  textDecoration: 'none',
+  fontWeight: 'bold',
+  fontSize: '18px',
+
+  boxShadow:
+    '0 15px 50px rgba(124,58,237,0.45)',
+
+  transition: '0.3s',
+}}
         />
 
         {/* CONTENT */}
@@ -208,20 +214,43 @@ function App() {
           >
 
             <a
-              href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
-              style={{
-                background: '#7c3aed',
-                color: 'white',
-                padding: '18px 40px',
-                borderRadius: '999px',
-                textDecoration: 'none',
-                fontWeight: 'bold',
-                fontSize: '18px',
-                boxShadow: '0 0 40px rgba(124,58,237,0.5)',
-              }}
-            >
-              ابدأ الآن
-            </a>
+  href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
+
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform =
+      'translateY(-4px) scale(1.03)'
+
+    e.currentTarget.style.boxShadow =
+      '0 25px 60px rgba(124,58,237,0.65)'
+  }}
+
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform =
+      'translateY(0px) scale(1)'
+
+    e.currentTarget.style.boxShadow =
+      '0 15px 50px rgba(124,58,237,0.45)'
+  }}
+
+  style={{
+    background:
+      'linear-gradient(135deg,#7c3aed,#9333ea)',
+
+    color: 'white',
+    padding: '18px 40px',
+    borderRadius: '999px',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    fontSize: '18px',
+
+    boxShadow:
+      '0 15px 50px rgba(124,58,237,0.45)',
+
+    transition: '0.3s',
+  }}
+>
+  ابدأ الآن
+</a>
 
             <a
               href='#portfolio'
