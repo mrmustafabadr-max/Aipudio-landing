@@ -63,7 +63,7 @@ function App() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            opacity: 0.28,
+            opacity: 0.42,
           }}
         >
           <source
