@@ -216,6 +216,11 @@ function App() {
             <a
   href='https://wa.me/201005825888?text=مرحبًا فريق Aipudio 👋%0A%0Aنوع النشاط:%0Aالباقة المختارة:%0A%0Aوأرغب في بدء تنفيذ فيديوهات AI سينمائية لمشروعي.'
 
+              onClick={() => {
+  if (window.fbq) {
+    fbq('track', 'Contact')
+  }
+}}
   onMouseEnter={(e) => {
     e.currentTarget.style.transform =
       'translateY(-4px) scale(1.03)'
