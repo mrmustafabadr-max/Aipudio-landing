@@ -296,15 +296,29 @@ function App() {
             {portfolioVideos.map((item, index) => (
 
               <div
-                key={index}
-                style={{
-                  background: 'rgba(255,255,255,0.04)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: '30px',
-                  overflow: 'hidden',
-                  backdropFilter: 'blur(14px)',
-                }}
-              >
+  key={index}
+
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = 'translateY(-10px)'
+    e.currentTarget.style.boxShadow =
+      '0 25px 70px rgba(124,58,237,0.35)'
+  }}
+
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = 'translateY(0px)'
+    e.currentTarget.style.boxShadow = 'none'
+  }}
+
+  style={{
+    background: 'rgba(255,255,255,0.04)',
+    border: '1px solid rgba(255,255,255,0.08)',
+    borderRadius: '30px',
+    overflow: 'hidden',
+    backdropFilter: 'blur(14px)',
+    transition: '0.4s',
+    cursor: 'pointer',
+  }}
+>
 
                 <video
                   autoPlay
